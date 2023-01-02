@@ -1,7 +1,7 @@
 ---
 title: "GitHub and Visual Studio Code"
 date: 2023-01-02T12:10:28-05:00
-draft: true
+draft: false
 ---
 
 As I wish to delve into the world of programming, it felt right for me to become more familiar with the tools Github and Visual Studio Code. Both are tools I will probably be using quite frequently.

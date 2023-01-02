@@ -5,15 +5,8 @@ theme: fuji
 
 params:
   homeInfoParams:
-    Title: "Hello Stranger"
-    Content: Welcome to my blog. Here you'll find a lot of cool information about a lot of cool stuff.
-  socialIcons:
-    - name: facebook
-      url: 'https://www.facebook.com/seungmin.kang.5/'
-    - name: discord
-      url: 'https://discord.gg/y8n3mDsg'
-    - name: instagram
-      url: 'https://www.instagram.com/seungminkangg/'
+    Title: "hello fren"
+    Content: hi hello welcome
 
   cover:
     linkFullImages: true
@@ -28,19 +21,5 @@ params:
 
   BookTheme: "dark"
 
-menu:
-  main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: archives
-      name: Archives
-      url: /archives/
-      weight: 30
 
       

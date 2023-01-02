@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Cookie&#39;s Notes</title>
+    <link>/docs/</link>
+    <description>Recent content in Docs on Cookie&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discord Bot Boi</title>
+      <link>/docs/page-two/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/page-two/</guid>
+      <description>As a starter programming project, I wanted to try creating a discord bot to track the steps collectively taken by a community towards a total community step goal.
+I used discord.js, a Node.js module that is used to interact with the Discord API.\
+The discord bot is hosted on the site Heroku.
+New Terms Node.js is an open-source, cross-platform JavaScript runtime environment for executing JavaScript code.
+Open-Source means software where the original source code is made freely available and may be redistributed and modified.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>/docs/page-one/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/page-one/</guid>
+      <description>My goal for a while has been to create a webiste, but I would get quickly overwhelmed everytime I tried starting. Hugo has been a huge help to get me over that hurdle. I hope to use this website to post my notes. I followed a video tutorial to get myself started using Hugo. [Video Link]
+Hugo Hugo makes static websites, static websites load faster than dynamic websites that use things like wordpress.</description>
+    </item>
+    
+  </channel>
+</rss>

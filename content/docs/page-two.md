@@ -13,7 +13,7 @@ I used discord.js, a Node.js module that is used to interact with the Discord AP
 
 The discord bot is hosted on the site Heroku.
 
-## New Terms
+## Terms
 
 **Node.js** is an open-source, cross-platform JavaScript runtime environment for executing JavaScript code.
 

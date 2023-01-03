@@ -13,6 +13,9 @@ I hope to use this website to post my notes.
 I followed a video tutorial to get myself started using Hugo.
 [[Video Link]](https://www.youtube.com/watch?v=hjD9jTi_DQ4ab_channel=EnvatoTuts%2B)
 
+A website called Netlify was used to setup a temporary free domain website. The website is handy that it syncs with changes made in the GitHub repository for this website.\
+[Link to Site](https://peaceful-donut-e0553c.netlify.app)
+
 ## Hugo
 Hugo makes static websites, static websites load faster than dynamic websites that use things like wordpress. I installed Chocolately for package management to install Hugo. Theme I chose is called Fuji.
 

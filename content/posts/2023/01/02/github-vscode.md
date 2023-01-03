@@ -5,7 +5,7 @@ draft: false
 tags: ["github"]
 ---
 
-As I delve into learning more about programming, it felt right for me to become more familiar with the tools Github and Visual Studio Code. Both are tools I will be using quite frequently.
+As I delve into learning more about programming, I should become more familiar with the tools Github and Visual Studio Code. Both are tools I will be using quite frequently.
 
 # GitHub
 
@@ -28,6 +28,8 @@ Create a new branch\
 
 
 ## Terms
-**GitHub** is a cloud-based service for storing and sharing source code.\
-**VS Code** is a streamlined code editor with support for development operations like debugging, task running, and version control.\
-**Repository** stores everything pertinent to a specific project including files, images, spreadsheets, data sets, and videos.\
+**GitHub** is a cloud-based service for storing and sharing source code.
+
+**VS Code** is a streamlined code editor with support for development operations like debugging, task running, and version control.
+
+**Repository** stores everything pertinent to a specific project including files, images, spreadsheets, data sets, and videos.

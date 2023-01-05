@@ -37,7 +37,7 @@ Vim stands for Vi IMproved and is an implementation of the Vi standard with many
 | ce | Delete the word and enter insert mode |
 | cc | Delete line and enter insert mode |
 | ci" | Change inner quotations marks | 
-| %s/oldword/newword/g | Replace all occurances of a word |
+| :%s/oldword/newword/g | Replace all occurances of a word |
 | . | Execute the command you just did |
 
 ## Visual Mode

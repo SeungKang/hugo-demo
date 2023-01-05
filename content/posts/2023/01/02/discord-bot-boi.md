@@ -9,7 +9,7 @@ categories: ["tech"]
 
 As a starter programming project, I wanted to try creating a discord bot to track the steps collectively taken by a community towards a total community step goal.
 
-I used discord.js, a Node.js module that is used to interact with the Discord API.\
+I used discord.js, a Node.js module that is used to interact with the Discord API.
 
 The discord bot is hosted on the site Heroku.
 

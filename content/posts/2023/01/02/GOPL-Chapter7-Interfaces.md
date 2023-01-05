@@ -73,6 +73,95 @@ The Len and Swap methods have identical definitions for all slice types.
 
 Package net/http provides **ServeMux**, a request *multiplexer*, to simplify the association between URLs and handlers. A **ServeMux** aggregates a collection of http.Handlers into a single http.Handler.
 
+For convenience, `net/http` provides a global `ServeMux` instance called `DefaultServeMux` and package-level functions called `http.Handle` and `http.HandleFunc`. To use DefaultServerMux as the server's main handler, we needn't pass it to ListenAndServe, `nill` will do.
+
+    func main() {
+        db := database{"shoes": 50, "socks": 5}
+        http.HandleFunc("/list", db.list)
+        http.HandleFunc("/price", db.price)
+        log.Fatal(http.ListenAndServe("localhost:8000", nil))
+    }
+
+## Exercise 7.11
+A handler request of /update?item=socks&price=6 to update the database. This introduces concurent variable updates.
+
+    func (p *PriceDB) Update(w http.ResponseWriter, r *http.Request) {
+        item := r.FormValue("item")
+        if item == "" {
+            http.Error(w, "No item given", http.StatusBadRequest)
+            return
+        }
+
+        priceStr := r.FormValue("price")
+        price, err := strconv.Atoi(priceStr)
+        if err != nil {
+            http.Error(w, "No integer price given", http.StatusBadRequest)
+            return
+        }
+
+        if _, ok := p.db[item]; !ok {
+            http.Error(w, fmt.Sprintf("%s doesn't exist", item), http.StatusNotFound)
+            return
+        }
+
+        p.Lock()
+        p.db[item] = price
+        p.Unlock()
+    }
+
+## Excercise 7.12
+html/template package to print the output as a HTML table
+
+    var listHTML = template.Must(template.New("list").Parse(`
+    <html>
+    <body>
+    <table>
+        <tr>
+            <th>item</th>
+            <th>price</th>
+        </tr>
+    {{range $k, $v := .}}
+        <tr>
+            <td>{{$k}}</td>
+            <td>{{$v}}</td>
+        </tr>
+    {{end}}
+    </table>
+    </body>
+    </html>
+    `))
+
+    func (p *PriceDB) List(w http.ResponseWriter, r *http.Request) {
+        p.Lock()
+        listHTML.Execute(w, p.db)
+        p.Unlock()
+    }
+
+## The `error` Interface
+
+The `error` type is an interface type with a single method that returns an error message:
+
+    type error interface {
+        Error() string
+    }
+
+`syscall` package provides Go's low-level system call API. Defines a numeric type `Errno` that error method does a lookup in a table of strings. `Errno` is an efficient representation of system-call errors drawn from a finite set, and it satisfies the standard error interface.
+
+The `go test` command runs a package's tests:
+
+    $ go test -v gopl.io/ch7/eval
+
+The -v flag lets us see the printed output of the test.
+
+## Type Assertions
+A type assertion is an operation applied to an interface value. A type assertion checks that the dynamic type of its operand matches the asserted type.
+
+    x.(T)
+`x` is an expression of an interface type and `T` is a type, called the **asserted** type.
+
+If `T` is a concrete type, then the type assertion checks whether `x`'s dynamic type is *identical* to `T`.\
+If `T` is an interface type, then the type assertion checks whether `x`'s dynamic type *satisfies* `T`.
+
 ## Terms
 
 **&buf** Is a pointer to a memory buffer to which bytes can be written.
